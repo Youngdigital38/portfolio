@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Planner | Ekene Frank (Young Digital)</title>
+  <meta name="description" content="An interactive academic planner: add tasks, mark them as completed and delete them. Built with JavaScript.">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8b84b'/%3E%3Ctext x='32' y='45' font-size='38' font-weight='800' text-anchor='middle' fill='%230b1f33' font-family='Georgia,serif'%3EY%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" aria-label="Young Digital - home">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span>Young Digital</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" aria-current="page">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker fade-in">Academic planner</span>
+        <h1 class="fade-in d1">Plan your <span style="color:var(--gold)">study week</span></h1>
+        <p class="fade-in d2">Add a task, tick it off when it's done, or delete it. Your tasks are saved in this browser, so they'll still be here when you come back.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Task planner">
+      <div class="container planner-layout">
+
+        <div class="card form-card">
+          <h2 style="font-size:1.4rem">Add a task</h2>
+          <form id="task-form" novalidate>
+            <div class="field">
+              <label for="task-title">Task</label>
+              <input type="text" id="task-title" name="title" placeholder="e.g. Revise Kirchhoff's rules" maxlength="120" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="task-course">Course</label>
+              <select id="task-course" name="course">
+                <option value="General">General</option>
+                <option value="COS 106">COS 106</option>
+                <option value="BMB 202">BMB 202</option>
+                <option value="ANA 201">ANA 201</option>
+                <option value="ENT 211">ENT 211</option>
+                <option value="COS 102">COS 102</option>
+                <option value="MTH 102">MTH 102</option>
+                <option value="PHY 102">PHY 102</option>
+                <option value="GST 112">GST 112</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="task-due">Due date <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <input type="date" id="task-due" name="due">
+            </div>
+            <span class="error-msg" id="task-error" role="alert"></span>
+            <button class="btn btn-primary" type="submit" style="width:100%">Add task</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="counters" aria-live="polite">
+            <div class="counter"><strong id="count-total">0</strong><span>Total</span></div>
+            <div class="counter"><strong id="count-pending">0</strong><span>Pending</span></div>
+            <div class="counter"><strong id="count-done">0</strong><span>Completed</span></div>
+          </div>
+
+          <div class="progress-bar" role="progressbar" aria-label="Share of tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progress-fill"></span>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+            <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+          </div>
+
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <div class="empty-state" id="empty-state">
+            <p style="margin:0"><strong>No tasks here yet.</strong><br>Add your first task using the form.</p>
+          </div>
+          <noscript><p>This planner needs JavaScript. Please enable it in your browser.</p></noscript>
+
+          <div class="planner-footer">
+            <span id="progress-text" style="color:var(--muted)"></span>
+            <button type="button" class="btn btn-danger" id="clear-completed">Clear completed</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year">2026</span> Ekene Frank (Young Digital). Built with HTML, CSS and JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Youngdigital38" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.facebook.com/search/top?q=Onyenwaa%20Frank" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

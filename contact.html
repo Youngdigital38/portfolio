@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Ekene Frank (Young Digital)</title>
+  <meta name="description" content="Contact Ekene Frank (Young Digital) using the validated contact form.">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8b84b'/%3E%3Ctext x='32' y='45' font-size='38' font-weight='800' text-anchor='middle' fill='%230b1f33' font-family='Georgia,serif'%3EY%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" aria-label="Young Digital - home">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span>Young Digital</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker fade-in">Contact</span>
+        <h1 class="fade-in d1">Let's <span style="color:var(--gold)">talk</span></h1>
+        <p class="fade-in d2">Fill in the form below. Every field is required.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact form">
+      <div class="container contact-layout">
+
+        <div class="card">
+          <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+              <span class="error-msg" id="name-error"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="error-msg" id="email-error"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 08012345678" inputmode="numeric" autocomplete="tel">
+              <span class="error-msg" id="phone-error"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can I help?"></textarea>
+              <span class="error-msg" id="message-error"></span>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
+
+        <aside class="card" aria-label="Other ways to reach me">
+          <h2 style="font-size:1.4rem">Find me online</h2>
+          <ul class="contact-list">
+            <li><strong>GitHub</strong><a href="https://github.com/Youngdigital38" target="_blank" rel="noopener noreferrer">Youngdigital38</a></li>
+            <li><strong>Facebook</strong><a href="https://www.facebook.com/search/top?q=Onyenwaa%20Frank" target="_blank" rel="noopener noreferrer">Onyenwaa Frank</a></li>
+            <li><strong>Based in</strong>Awka, Nigeria</li>
+          </ul>
+          <p>This form validates your details in the browser. It doesn't send them anywhere.</p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year">2026</span> Ekene Frank (Young Digital). Built with HTML, CSS and JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Youngdigital38" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.facebook.com/search/top?q=Onyenwaa%20Frank" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

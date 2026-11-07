@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ekene Frank | Young Digital</title>
+  <meta name="description" content="Portfolio of Ekene Frank (Young Digital), a student learning Data Science and building study tools with HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8b84b'/%3E%3Ctext x='32' y='45' font-size='38' font-weight='800' text-anchor='middle' fill='%230b1f33' font-family='Georgia,serif'%3EY%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" aria-label="Young Digital - home">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span>Young Digital</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="kicker fade-in">Student &middot; Data Science learner &middot; Future founder</span>
+            <h1 id="hero-title" class="fade-in d1">Hi, I'm <span>Ekene Frank</span></h1>
+            <p class="typed-line fade-in d2" aria-hidden="true">I'm a <span id="typed-role" data-roles="student|Data Science learner|future founder|study-tool builder">student</span><span class="caret"></span></p>
+            <p class="lead fade-in d2">Welcome to my portfolio! This is where I share who I am, what I'm learning, and the study tools I've built along the way.</p>
+            <p class="fade-in d2">Most people call me <strong>Young</strong>. I'm a 200-level student at Nnamdi Azikiwe University (UNIZIK) in Awka, Nigeria, studying Human Nutrition and Dietetics, and I'm also enrolled in a Data Science program at MIVA Open University. I'm curious about technology, I love learning new things, and I want to use Data Science to solve real-life problems.</p>
+            <div class="hero-actions fade-in d3">
+              <a class="btn btn-primary" href="projects.html">See my projects</a>
+              <a class="btn btn-outline" href="contact.html">Get in touch</a>
+            </div>
+          </div>
+          <div class="avatar-wrap fade-in d2">
+            <img class="avatar" src="images/young.jpg" alt="Portrait of Ekene Frank" width="640" height="640" loading="eager">
+          </div>
+        </div>
+
+        <div class="stats" aria-label="Quick facts">
+          <div class="stat"><strong data-count="2">2</strong><span>Programs I'm studying</span></div>
+          <div class="stat"><strong data-count="3">3</strong><span>Study guides featured here</span></div>
+          <div class="stat"><strong data-count="1">1</strong><span>Working task planner</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-title">
+          <span class="kicker">Explore</span>
+          <h2 id="explore-title">What you'll find here</h2>
+          <p>Everything on this site was written by hand in HTML, CSS and JavaScript.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+            <h3>About me</h3>
+            <p>My education, career goals, skills and the things I enjoy outside of class.</p>
+            <a href="about.html">Read more &rarr;</a>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Projects</h3>
+            <p>Visual study guides for BMB 202, ANA 201 and ENT 211, plus my academic planner.</p>
+            <a href="projects.html">View projects &rarr;</a>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <h3>Academic planner</h3>
+            <p>A working to-do list for students: add tasks, tick them off and delete them.</p>
+            <a href="planner.html">Open the planner &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="card" style="text-align:center">
+          <h2 id="cta-title">Let's build something meaningful</h2>
+          <p>Have a question, an idea or a project in mind? I'd love to hear from you.</p>
+          <a class="btn btn-primary" href="contact.html">Send me a message</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year">2026</span> Ekene Frank (Young Digital). Built with HTML, CSS and JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Youngdigital38" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.facebook.com/search/top?q=Onyenwaa%20Frank" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+
+</body>
+</html>
